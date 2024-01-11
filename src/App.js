@@ -5,7 +5,10 @@ import Introtext from "./components/introtext/introtext";
 import Login from "./components/login/login";
 import {Toptracks} from "./components/toptracks/toptracks";
 import OptionButtons from "./components/optionbuttons/optionbuttons";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Songcontainer from "./components/songcontainer/songcontainer";
+import {useState} from "react";
+import {Playlist} from "./components/playlist/playlist";
+import Saveplaylist from "./components/saveplaylist/saveplaylist";
 
 const code = new URLSearchParams(window.location.search).get('code')
 const state = new URLSearchParams(window.location.search).get('state')
@@ -17,6 +20,9 @@ function App() {
           <Introtext />
           <Login code={code} state={state}/>
           <OptionButtons />
+          <Songcontainer />
+          <Playlist />
+          <Saveplaylist />
       </div>
   );
 }

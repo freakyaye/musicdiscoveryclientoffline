@@ -1,10 +1,12 @@
 import {useEffect, useState} from "react";
+import './login.css'
+import {Button} from "@nextui-org/react";
 
 export default function Login({code, state}) {
-// const [loggedIn, setLoggedIn] = useState(false)
+
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     useEffect(() => {
-        console.log(code)
         const data = new URLSearchParams()
         data.append('code', code)
         data.append('state', state)
@@ -16,6 +18,7 @@ export default function Login({code, state}) {
                      body: data,
                  })
              }
+             setIsLoggedIn(true)
              sendCode(code, state)
         } catch (e) {
             console.error(e)
@@ -26,17 +29,27 @@ export default function Login({code, state}) {
         window.open('http://localhost:4000/login', '_self')
     }
 
-    function logout() {
-        window.open('http://localhost:4000/logout', '_self')
+    async function logout() {
+        const response = await fetch('http://localhost/logout/')
+        if (response.status === 200) {
+            setIsLoggedIn(false)
+        }
     }
 
     return (
         <>
-            <button onClick={login}>Login</button>
-            {/*{loggedIn ? ({<button onClick={logout}>Logout</button>}) :() }*/}
-            <button onClick={logout}>Logout</button>
-            <p>{code}</p>
-            <p>{state}</p>
+            <div className="mainDiv">
+                <img
+                    className="mb-5 flex self-center"
+                    src={require("./spotify logo.png")}
+                    width="100"
+                />
+
+                {isLoggedIn ?
+                    <Button className="bg-yellow-400 mb-1 w-min self-center" onClick={logout}>Logout</Button>
+                 :
+                    <Button className="bg-yellow-400 mb-1 w-min self-center" onClick={login}>Login</Button>}
+            </div>
         </>
     )
 }
