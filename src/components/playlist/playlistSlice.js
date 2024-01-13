@@ -1,6 +1,4 @@
 import {createSlice, current} from "@reduxjs/toolkit";
-import {accordionItem} from "@nextui-org/react";
-import {renderIntoDocument} from "react-dom/test-utils";
 
 const initialState = {
     songList: []
@@ -11,16 +9,20 @@ const playlistSlice = createSlice({
     initialState,
     reducers: {
         addSong: (state, action) => {
-            state.songList.push(action.payload)
+            // if (state.songList.length >= 99) {
+                state.songList.push(action.payload)
+            // } else {
+            //     return
+            //     }
             },
         removeSong: (state, action) => {
             const id = state.songList.findIndex(temp => temp.index === action.payload)
             const newState = state.songList.splice(id,  1)
 
-        }
+        },
     }
 })
 
-export const {addSong, removeSong} = playlistSlice.actions
+export const {addSong, removeSong, returnSongs} = playlistSlice.actions
 
 export default playlistSlice.reducer

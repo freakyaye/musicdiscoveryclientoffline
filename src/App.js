@@ -9,6 +9,7 @@ import Songcontainer from "./components/songcontainer/songcontainer";
 import {useState} from "react";
 import {Playlist} from "./components/playlist/playlist";
 import Saveplaylist from "./components/saveplaylist/saveplaylist";
+import Simplesearch from "./components/simplesearch/simplesearch";
 
 const code = new URLSearchParams(window.location.search).get('code')
 const state = new URLSearchParams(window.location.search).get('state')
@@ -20,6 +21,7 @@ function App() {
           <Introtext />
           <Login code={code} state={state}/>
           <OptionButtons />
+          <Simplesearch />
           <Songcontainer />
           <Playlist />
           <Saveplaylist />

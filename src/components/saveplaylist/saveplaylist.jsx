@@ -1,47 +1,48 @@
-import {Button} from "@nextui-org/react";
+import {accordionItem, button, Button, Textarea} from "@nextui-org/react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, Checkbox, Input, Link} from "@nextui-org/react";
+import {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {returnSongs} from "../playlist/playlistSlice";
 
 
 export default function Saveplaylist() {
-    const {isOpen, onOpen, onOpenChange} = useDisclosure();
-    const saveClick = () => {
+const [textArea, setTextArea] = useState('')
+    const songs = useSelector(state => (state.playlist.songList))
 
+    const pressHandler = async () => {
+        const songsToAdd = songs.map(item => item.uri)
+        const response = await fetch('http://localhost:4000/saveplaylist', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                playlistName: textArea,
+                songsToAdd: songsToAdd,
+            })
+        })
+        if (response.status === 200) {
+            alert('Playlist saved successfully')
+        }
+    }
+
+    function logState() {
 
     }
+
     return (
         <>
             <div className="flex justify-center mb-3">
-                <Button onPress={onOpen} className="bg-yellow-400 text-lg">Save Playlist</Button>
-                <Modal
-                    isOpen={isOpen}
-                    onOpenChange={onOpenChange}
-                    placement="top-center"
+                <Textarea
+                    className="max-w-80"
+                maxRows={1}
+                label="Playlist name"
+                placeholder="Enter a name for your playlist"
+                    onChange={(e) => setTextArea(e.target.value)}
                 >
-                    <ModalContent>
-                        {(onClose) => (
-                            <>
-                                <ModalHeader className="flex flex-col gap-1">Give your playlist a name</ModalHeader>
-                                <ModalBody>
-                                    <Input
-                                        autoFocus
-                                        label="Playlist name"
-                                        placeholder="Enter your new playlist name"
-                                        variant="bordered"
-                                    />
-
-                                </ModalBody>
-                                <ModalFooter>
-                                    <Button color="success" variant="flat" onPress={saveClick}>
-                                        Save
-                                    </Button>
-                                    <Button color="danger" variant="flat" onPress={onClose}>
-                                        Close
-                                    </Button>
-                                </ModalFooter>
-                            </>
-                        )}
-                    </ModalContent>
-                </Modal>
+                </Textarea>
+                <Button className="bg-yellow-400 text-lg" isDisabled={textArea.trim() === ''} onPress={pressHandler}>Save Playlist</Button>
+                <Button className="bg-yellow-400 text-lg" onPress={logState}>log state</Button>
             </div>
 
         </>
