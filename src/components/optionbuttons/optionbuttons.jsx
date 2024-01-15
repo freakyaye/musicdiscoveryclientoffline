@@ -40,7 +40,7 @@ export default function OptionButtons() {
             >
                 <Radio size='lg' value="My Top Tracks" onChange={myTopTracks}>My Top Tracks</Radio>
             <Radio size='lg' value="Simple Search" onChange={simpleSearch}>Simple Search</Radio>
-                <Radio size='lg' value="Advanced Search" onChange={simpleSearch}>Advanced Search</Radio>
+                <Radio size='lg' value="Advanced Search" onChange={advancedSearch}>Advanced Search</Radio>
             </RadioGroup>
             </div>
         </>

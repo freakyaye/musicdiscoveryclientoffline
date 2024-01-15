@@ -9,6 +9,7 @@ const songcontainerSlice = createSlice({
     initialState,
     reducers: {
         addSongs: (state, action) => {
+            state.songList = []
             state.songList.push(action.payload)
         }
     }

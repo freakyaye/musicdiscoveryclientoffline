@@ -3,6 +3,7 @@ import {Image} from "react-bootstrap";
 import {addSong, removeSong} from "../playlist/playlistSlice";
 import {useDispatch} from "react-redux";
 import {useEffect, useState} from "react";
+import {addSongs} from "../songcontainer/songcontainerSlice";
 
 export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName, albumName, artistName, popularity, danceability, energy, tempo, valence, }) {
 
@@ -28,6 +29,13 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
 
     function removeFromPlaylist() {
         dispatch(removeSong(cardIndex))
+    }
+
+    async function getRecommendations() {
+        const urlParams = new URLSearchParams({trackid: trackId})
+        const response = await fetch('http://localhost:4000/getrecommendations?' + urlParams.toString())
+        const data = await response.json()
+        dispatch(addSongs(data))
     }
 
     return (
@@ -78,7 +86,7 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
                         </div>
                     </PopoverContent>
                 </Popover>
-                <Button className={"mx-1"} isIconOnly aria-label="Get Recommendations">
+                <Button className={"mx-1"} onPress={getRecommendations} isIconOnly aria-label="Get Recommendations">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                          fill="currentColor"
                          className="bi bi-search-heart" viewBox="0 0 16 16">
