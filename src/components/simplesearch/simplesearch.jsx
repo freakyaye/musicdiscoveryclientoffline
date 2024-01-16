@@ -20,13 +20,15 @@ export default function Simplesearch() {
         if (!validateSong()) {
             const shortString = firstFifty()
             const urlParams = new URLSearchParams({song: shortString})
-          const response = await fetch(`http://localhost:4000/songsearch?` + urlParams)
+          const response = await fetch(`/songsearch?` + urlParams)
             if (response.status === 200) {
             const data = await response.json()
             dispatch(addSongs(data))
         } else {
                 if (response.status === 204) {
                     alert('No tracks found')
+                } else if (response.status === 403) {
+                    alert('Please log in')
                 }
         }
         }

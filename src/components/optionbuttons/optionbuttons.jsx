@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 import {addSongs} from "../songcontainer/songcontainerSlice";
 import './optionbuttons.css'
-import {Button, ButtonGroup, Radio, RadioGroup, cn} from "@nextui-org/react";
+import {Button, ButtonGroup, Radio, RadioGroup, cn, SelectSection} from "@nextui-org/react";
 import {changeOption} from "./optionbuttonsSlice";
 
 
@@ -14,13 +14,20 @@ export default function OptionButtons() {
 
     async function myTopTracks() {
         dispatch(changeOption('myTopTracks'))
-
-        const response = await fetch('http://localhost:4000/mytoptracks', {
-            method: "GET"
-        })
-        const result = await response.json()
-        setSongList(result)
-        dispatch(addSongs(result))
+        try {
+            const response = await fetch('/mytoptracks', {
+                method: "GET"
+            })
+            if (response.status === 200) {
+                const result = await response.json()
+                setSongList(result)
+                dispatch(addSongs(result))
+            } else if (response.status === 403) {
+                alert('Please log in')
+            }
+        } catch (e) {
+            console.error(e)
+        }
     }
 
     function simpleSearch() {

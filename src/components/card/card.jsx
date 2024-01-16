@@ -33,9 +33,18 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
 
     async function getRecommendations() {
         const urlParams = new URLSearchParams({trackid: trackId})
-        const response = await fetch('http://localhost:4000/getrecommendations?' + urlParams.toString())
-        const data = await response.json()
-        dispatch(addSongs(data))
+        try {
+            const response = await fetch('/getrecommendations?' + urlParams.toString())
+            if (response.status === 200) {
+                const data = await response.json()
+                dispatch(addSongs(data))
+            } else if (response.status === 403) {
+                alert('Please login')
+            }
+        } catch (e) {
+            console.error(e)
+        }
+
     }
 
     return (

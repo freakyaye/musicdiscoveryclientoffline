@@ -10,25 +10,27 @@ const [textArea, setTextArea] = useState('')
     const songs = useSelector(state => (state.playlist.songList))
 
     const pressHandler = async () => {
+    const trimmedPlaylistName = textArea.slice(0,50)
+        if (songs.length !== 0) {
         const songsToAdd = songs.map(item => item.uri)
-        const response = await fetch('http://localhost:4000/saveplaylist', {
+        const response = await fetch('/saveplaylist', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                playlistName: textArea,
+                playlistName: trimmedPlaylistName,
                 songsToAdd: songsToAdd,
             })
         })
         if (response.status === 200) {
             alert('Playlist saved successfully')
         }
-    }
-
-    function logState() {
-
-    }
+     else if (response.status === 403) {
+            alert('Please login')
+        } else {
+        alert('Playlist cannot be empty')
+    }}}
 
     return (
         <>
@@ -42,7 +44,7 @@ const [textArea, setTextArea] = useState('')
                 >
                 </Textarea>
                 <Button className="bg-yellow-400 text-lg" isDisabled={textArea.trim() === ''} onPress={pressHandler}>Save Playlist</Button>
-                <Button className="bg-yellow-400 text-lg" onPress={logState}>log state</Button>
+
             </div>
 
         </>

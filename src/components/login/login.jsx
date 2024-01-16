@@ -2,37 +2,24 @@ import {useEffect, useState} from "react";
 import './login.css'
 import {Button} from "@nextui-org/react";
 
-export default function Login({code, state}) {
+export default function Login({loginValue}) {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     useEffect(() => {
-        const data = new URLSearchParams()
-        data.append('code', code)
-        data.append('state', state)
-        if (code !== null) {
-            try {
-             function sendCode(code, state) {
-                 fetch('http://localhost:4000/login', {
-                     method: "POST",
-                     body: data,
-                 })
-             }
-             setIsLoggedIn(true)
-             sendCode(code, state)
-        } catch (e) {
-            console.error(e)
-        }
-    }}, [code, state]);
+        if (loginValue === 'yes') {
+            setIsLoggedIn(true)
+    }}, [loginValue]);
 
     function login() {
-        window.open('http://localhost:4000/login', '_self')
+        window.open('/login', '_self')
     }
 
     async function logout() {
-        const response = await fetch('http://localhost/logout/')
+        const response = await fetch('/logout/')
         if (response.status === 200) {
             setIsLoggedIn(false)
+            alert('Logged out')
         }
     }
 

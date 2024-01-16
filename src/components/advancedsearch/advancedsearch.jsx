@@ -48,10 +48,18 @@ export default function Advancedsearch() {
     async function search() {
         if (valueCheck()) {
             const urlParams = buildSearchObject()
-            // console.log(urlParams.toString())
-            const response = await fetch('http://localhost:4000/advancedsearch?' + urlParams)
-            const data = await response.json()
-            dispatch(addSongs(data))
+            try {
+                const response = await fetch('/advancedsearch?' + urlParams)
+                if (response.status === 200) {
+                    const data = await response.json()
+                    dispatch(addSongs(data))
+                } else if (response.status === 403) {
+                    alert('Please login')
+                }
+            } catch (e) {
+                console.error(e)
+            }
+
         }
     }
 
@@ -72,12 +80,6 @@ export default function Advancedsearch() {
         if (danceability === '') {
             setDanceavility( null)
         }
-        // if (popularity >= 0 && popularity <= 100 && popularity !== null &&
-        //     energy >= 0 && energy <= 100 && energy !== null &&
-        //     tempo >= 0 && tempo <= 250 && tempo !== null &&
-        //     valence >= 0 && valence <= 100 && valence !== null &&
-        //     danceability >= 0 && danceability <= 100 && danceability !== null
-        // )
 
         if (popularity !== null && popularity <= 0 && popularity >= 100) {
             alert('Check your value for populairty, it should be between 0 and 100')
@@ -99,12 +101,6 @@ export default function Advancedsearch() {
             return false
         }
 
-            // console.log(popularity)
-            // console.log(energy)
-            // console.log(tempo)
-            // console.log(valence)
-            // console.log(danceability)
-            // console.log(genreChoice)
             return true
         }
 
