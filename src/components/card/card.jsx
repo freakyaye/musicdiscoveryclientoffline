@@ -61,7 +61,7 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
             />
         </CardHeader>
         <CardBody>
-            <div className="-mt-5 pb-1">
+            <div className="-mt-3 pb-1">
             <h3>{trackName}</h3>
             <h6>{albumName}</h6>
             <h6>{artistName}</h6>

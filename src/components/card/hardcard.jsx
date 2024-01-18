@@ -9,13 +9,14 @@ export default function Hardcard() {
             <Card>
                 <CardHeader>
                     <Image
+                        className=""
                         alt="album artwork"
                         src={require("./testlogo.png")}
                         width={150}
                     />
                 </CardHeader>
                 <CardBody>
-                    <div className="-mt-5 pb-1">
+                    <div className="-mt-3 pb-1">
                     <h3>trackname</h3>
                     <h6>albumname</h6>
                     <h6>artistname</h6>

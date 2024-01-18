@@ -9,6 +9,7 @@ import {Playlist} from "./components/playlist/playlist";
 import Saveplaylist from "./components/saveplaylist/saveplaylist";
 import Simplesearch from "./components/simplesearch/simplesearch";
 import Advancedsearch from "./components/advancedsearch/advancedsearch";
+import Hardcard from "./components/card/hardcard";
 
 const loggedIn = new URLSearchParams(window.location.search).get('loggedin')
 
