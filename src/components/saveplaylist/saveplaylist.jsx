@@ -13,6 +13,7 @@ const [textArea, setTextArea] = useState('')
     const trimmedPlaylistName = textArea.slice(0,50)
         if (songs.length !== 0) {
         const songsToAdd = songs.map(item => item.uri)
+            const max99songsToAdd = songsToAdd.slice(0,99)
         const response = await fetch('/saveplaylist', {
             method: 'POST',
             headers: {
@@ -20,7 +21,7 @@ const [textArea, setTextArea] = useState('')
             },
             body: JSON.stringify({
                 playlistName: trimmedPlaylistName,
-                songsToAdd: songsToAdd,
+                songsToAdd: max99songsToAdd,
             })
         })
         if (response.status === 200) {

@@ -1,13 +1,11 @@
-import {Image} from "@nextui-org/react"
+import background from './musicdiscoveryv2.jpg'
 import './mainbanner.css'
 
 export default function Mainbanner() {
     return (
         <>
-        <div className="mainImage">
-        <img src={require("./logo_edited_light.jpg")}
-            alt="main title"
-            />
+        <div className="mainImage flex-auto" style={{backgroundImage: `url(${background})`, backgroundPosition: "center", backgroundRepeat: "no-repeat"}}>
+        <p className="pb-5 text-7xl text-amber-600 bg-myOffWhite/30 font-bold italic self-end text-center">Music Discovery</p>
         </div>
         </>
     )

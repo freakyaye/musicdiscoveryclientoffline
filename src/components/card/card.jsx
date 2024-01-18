@@ -2,7 +2,6 @@ import {Button, Card, CardBody, CardHeader, Popover, PopoverContent, PopoverTrig
 import {Image} from "react-bootstrap";
 import {addSong, removeSong} from "../playlist/playlistSlice";
 import {useDispatch} from "react-redux";
-import {useEffect, useState} from "react";
 import {addSongs} from "../songcontainer/songcontainerSlice";
 
 export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName, albumName, artistName, popularity, danceability, energy, tempo, valence, }) {
@@ -29,6 +28,10 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
 
     function removeFromPlaylist() {
         dispatch(removeSong(cardIndex))
+    }
+
+    function openSpotify() {
+        window.open(`${uri}`)
     }
 
     async function getRecommendations() {
@@ -58,10 +61,11 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
             />
         </CardHeader>
         <CardBody>
+            <div className="-mt-5 pb-1">
             <h3>{trackName}</h3>
             <h6>{albumName}</h6>
             <h6>{artistName}</h6>
-
+            </div>
             <div>
                 <Popover placement="right">
                     <PopoverTrigger>
@@ -121,6 +125,14 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
                     </svg>
                 </Button>
                 }
+                <Image
+                    className="inline-block pb-6"
+                    alt="Click to play in Spotify"
+                    onClick={openSpotify}
+                    src={require("./smallLogo.png")}
+                    width={38}
+                    height={38}
+                />
             </div>
         </CardBody>
     </Card>

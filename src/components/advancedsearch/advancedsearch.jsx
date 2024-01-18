@@ -88,8 +88,8 @@ export default function Advancedsearch() {
             alert('Check your value for energy, it should be between 0 and 100')
             return false
         }
-        else if (tempo !== null && tempo <= 0 && tempo >= 100) {
-            alert('Check your value for tempo, it should be between 0 and 100')
+        else if (tempo !== null && tempo <= 0 && tempo >= 250) {
+            alert('Check your value for tempo, it should be between 0 and 250')
             return false
         }
         else if (danceability !== null && danceability <= 0 && danceability >= 100) {
@@ -115,7 +115,7 @@ export default function Advancedsearch() {
         return (
             <>
                 <div className="flex flex-col mb-3">
-                    {<select onChange={e => setGenre(e.currentTarget.value)} className="max-w-80 mb-1 self-center rounded border border-slate-300" name="Genre" id="Genre">
+                    {<select onChange={e => setGenre(e.currentTarget.value)} className="max-w-80 mb-1 self-center rounded border border-slate-300" aria-label="Pick a genre" name="Genre" id="Genre">
                         {genre.map(e => {
                             return <option key={e} value={`${e}`}>{e}</option>
                         })}

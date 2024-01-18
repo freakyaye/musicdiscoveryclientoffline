@@ -30,6 +30,7 @@ export default function Login({loginValue}) {
                     className="mb-5 flex self-center"
                     src={require("./spotify logo.png")}
                     width="100"
+                    alt="Spotify logo"
                 />
 
                 {isLoggedIn ?

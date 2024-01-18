@@ -1,6 +1,10 @@
 .mainImage {
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #fbfcf4;
+    background-size: contain;
+    height: 417px;
 }
 
 img {
