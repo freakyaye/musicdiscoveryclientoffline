@@ -127,6 +127,7 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
                 }
                 <div className="p-5 ml-8">
                 <Image
+                    style={{cursor: "pointer"}}
                     className="inline-block"
                     alt="Click to play on Spotify"
                     onClick={openSpotify}

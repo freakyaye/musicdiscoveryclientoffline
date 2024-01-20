@@ -82,6 +82,7 @@ export default function Hardcard() {
                         }
                             <div className="p-5 ml-8">
                             <Image
+                                style={{cursor: "pointer"}}
                                 className="inline-block"
                                 alt="Play in Spotify"
                                 src={require("./smallLogo.png")}
