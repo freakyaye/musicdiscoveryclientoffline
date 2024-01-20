@@ -19,7 +19,7 @@ export default function Login({loginValue}) {
         const response = await fetch('/logout/')
         if (response.status === 200) {
             setIsLoggedIn(false)
-            alert('Logged out')
+            window.open('/', '_self')
         }
     }
 

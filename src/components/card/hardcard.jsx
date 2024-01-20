@@ -80,14 +80,15 @@ export default function Hardcard() {
                                     </svg>
                                 </Button>
                         }
-
+                            <div className="p-5 ml-8">
                             <Image
-                                className="inline-block pb-6"
+                                className="inline-block"
                                 alt="Play in Spotify"
                                 src={require("./smallLogo.png")}
                                 width={38}
                                 height={38}
                             />
+                            </div>
                     </div>
                 </CardBody>
             </Card>

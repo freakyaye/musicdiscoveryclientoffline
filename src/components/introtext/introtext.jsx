@@ -1,4 +1,5 @@
 import './introtext.css'
+import {Image} from "react-bootstrap";
 
 export default function Introtext() {
     return (
@@ -36,6 +37,18 @@ export default function Introtext() {
                     </svg>
                             <span id="plus-icon">Click to save this song to your playlist</span>
                         </div>
+                    <div className="">
+                        <div className="p-5 inline-block">
+                        <Image
+                            className="inline-block"
+                            alt="Click to play on Spotify"
+                            src={require("../card/smallLogo.png")}
+                            width={38}
+                            height={38}
+                        />
+                        </div>
+                        <span className="inline-block" id="Spotify icon">Click to play this song in Spotify</span>
+                    </div>
                 </div>
             </div>
         </>
