@@ -12,15 +12,16 @@ export default function Login({loginValue}) {
     }}, [loginValue]);
 
     function login() {
-        window.open('/login', '_self')
+        // window.open('/login', '_self')
+        window.open('/?loggedin=yes', '_self')
     }
 
     async function logout() {
-        const response = await fetch('/logout/')
-        if (response.status === 200) {
+        // const response = await fetch('/logout/')
+        // if (response.status === 200) {
             setIsLoggedIn(false)
             window.open('/', '_self')
-        }
+        // }
     }
 
     return (

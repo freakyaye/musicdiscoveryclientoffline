@@ -2,6 +2,7 @@ import {Button, Input} from '@nextui-org/react'
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {addSongs} from "../songcontainer/songcontainerSlice";
+import {sendArray} from "../../songdata/songdata";
 export default function Simplesearch() {
 
     const option = useSelector(state => state.optionbuttons.chosenOption)
@@ -17,21 +18,21 @@ export default function Simplesearch() {
         }
     }, [option]);
     async function search() {
-        if (!validateSong()) {
-            const shortString = firstFifty()
-            const urlParams = new URLSearchParams({song: shortString})
-          const response = await fetch(`/songsearch?` + urlParams)
-            if (response.status === 200) {
-            const data = await response.json()
-            dispatch(addSongs(data))
-        } else {
-                if (response.status === 204) {
-                    alert('No tracks found')
-                } else if (response.status === 403) {
-                    alert('Please log in')
-                }
-        }
-        }
+        // if (!validateSong()) {
+        //     const shortString = firstFifty()
+        //     const urlParams = new URLSearchParams({song: shortString})
+        //   const response = await fetch(`/songsearch?` + urlParams)
+        //     if (response.status === 200) {
+        //     const data = await response.json()
+            dispatch(addSongs(sendArray()))
+        // } else {
+        //         if (response.status === 204) {
+        //             alert('No tracks found')
+        //         } else if (response.status === 403) {
+        //             alert('Please log in')
+        //         }
+        // }
+        // }
     }
 
     function firstFifty() {

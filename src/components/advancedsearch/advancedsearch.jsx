@@ -2,6 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {Button, Input} from "@nextui-org/react";
 import {addSongs} from "../songcontainer/songcontainerSlice";
+import {sendArray} from "../../songdata/songdata";
 
 
 export default function Advancedsearch() {
@@ -48,18 +49,18 @@ export default function Advancedsearch() {
     async function search() {
         if (valueCheck()) {
             const urlParams = buildSearchObject()
-            try {
-                const response = await fetch('/advancedsearch?' + urlParams)
-                if (response.status === 200) {
-                    const data = await response.json()
-                    dispatch(addSongs(data))
-                } else if (response.status === 403) {
-                    alert('Please login')
-                }
-            } catch (e) {
-                console.error(e)
-            }
-
+            // try {
+            //     const response = await fetch('/advancedsearch?' + urlParams)
+            //     if (response.status === 200) {
+            //         const data = await response.json()
+            //         dispatch(addSongs(data))
+            //     } else if (response.status === 403) {
+            //         alert('Please login')
+            //     }
+            // } catch (e) {
+            //     console.error(e)
+            // }
+            dispatch(addSongs(sendArray()))
         }
     }
 
