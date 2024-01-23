@@ -4,6 +4,7 @@ import {addSong, removeSong} from "../playlist/playlistSlice";
 import {useDispatch} from "react-redux";
 import {addSongs} from "../songcontainer/songcontainerSlice";
 import {recommendations} from "../../songdata/songdata";
+import {sendArray} from "../../songdata/songdata";
 
 export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName, albumName, artistName, popularity, danceability, energy, tempo, valence, }) {
 
@@ -48,7 +49,7 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
         // } catch (e) {
         //     console.error(e)
         // }
-        dispatch(addSongs(recommendations))
+        dispatch(addSongs(sendArray()))
 
     }
 

@@ -1,6 +1,6 @@
 
 
-export const array1 = [
+export const toptracks = [
     {
         artwork: 'https://i.scdn.co/image/ab67616d00001e02f629eb64fd8ef76a97b154f5',
         albumName: 'CRASH',
@@ -1001,11 +1001,7 @@ export const array2 = [
     }
 ]
 
-export const combinedArray = [array1, array2, array3, array4, array5, array6]
-
-
-
-export const recommendations = [
+export const array1 = [
     {
         artwork: 'https://i.scdn.co/image/ab67616d00001e02a6f439c8957170652f9410e2',
         albumName: 'Loose',
@@ -1147,6 +1143,8 @@ export const recommendations = [
         uri: 'spotify:track:3wuCCNCnBhJlwkIJTBZFiv'
     }
 ]
+
+export const combinedArray = [array1, array2, array3, array4, array5, array6]
 
 function getRandomInt(min, max) {
     min = Math.ceil(min); // Ensure the minimum is a whole number

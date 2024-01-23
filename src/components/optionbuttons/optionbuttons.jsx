@@ -5,7 +5,7 @@ import {addSongs} from "../songcontainer/songcontainerSlice";
 import './optionbuttons.css'
 import {Button, ButtonGroup, Radio, RadioGroup, cn, SelectSection} from "@nextui-org/react";
 import {changeOption} from "./optionbuttonsSlice";
-import {sendArray} from "../../songdata/songdata";
+import {sendArray, toptracks} from "../../songdata/songdata";
 
 
 export default function OptionButtons() {
@@ -22,8 +22,8 @@ export default function OptionButtons() {
             // if (response.status === 200) {
             //     const result = await response.json()
 
-                setSongList(sendArray())
-                dispatch(addSongs(sendArray()))
+                setSongList(toptracks)
+                dispatch(addSongs(toptracks))
         //     } else if (response.status === 403) {
         //         alert('Please log in')
         //     }
