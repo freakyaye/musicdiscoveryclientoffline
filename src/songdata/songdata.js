@@ -16,18 +16,18 @@ export const array1 = [
         uri: 'spotify:track:11M8c9SHQYpd8DOrmcu25k'
     },
     {
-        artwork: 'https://i.scdn.co/image/ab67616d00001e02b9c31266edab1e90863b0b40',
-        albumName: 'Another Nasty Song',
-        artistName: 'Latto',
-        trackName: 'Another Nasty Song',
-        trackId: '6lABMzDz2QUqZXRPvQIkuJ',
-        popularity: 50,
-        sample: 'https://p.scdn.co/mp3-preview/af0cd51999785e779bea26b9345d3895a89b519c?cid=ce221dc6b3f440eb8e03b89481d78974',
-        danceability: 0.853,
-        energy: 0.476,
-        valence: 0.646,
-        tempo: 76.525,
-        uri: 'spotify:track:6lABMzDz2QUqZXRPvQIkuJ'
+        artwork: 'https://i.scdn.co/image/ab67616d00001e028ad8f5243d6534e03b656c8b',
+        albumName: 'Starboy (Deluxe)',
+        artistName: 'The Weeknd',
+        trackName: 'Starboy (feat. Daft Punk) - Kygo Remix',
+        trackId: '3DCc4HPrVukBeaDGe3Cosk',
+        popularity: 56,
+        sample: null,
+        danceability: 0.741,
+        energy: 0.562,
+        valence: 0.465,
+        tempo: 93.028,
+        uri: 'spotify:track:3DCc4HPrVukBeaDGe3Cosk'
     },
     {
         artwork: 'https://i.scdn.co/image/ab67616d00001e028a585fb7c6564e1e24739e15',
@@ -100,18 +100,18 @@ export const array1 = [
         uri: 'spotify:track:45kRQsucOJ8Pajk7FHRo2X'
     },
     {
-        artwork: 'https://i.scdn.co/image/ab67616d00001e02cf78630c607d26cfe17f0d2b',
-        albumName: 'How We Roll',
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02cd342d8095cbf7f794883d7d',
+        albumName: 'Jackie (Deluxe)',
         artistName: 'Ciara',
-        trackName: 'How We Roll',
-        trackId: '7Fdhp8np9nZhsghO2VIPvJ',
-        popularity: 64,
-        sample: 'https://p.scdn.co/mp3-preview/6d3007d9403b6c4395593b7ac9d49fc6b4e19365?cid=ce221dc6b3f440eb8e03b89481d78974',
-        danceability: 0.777,
-        energy: 0.631,
-        valence: 0.337,
-        tempo: 96.015,
-        uri: 'spotify:track:7Fdhp8np9nZhsghO2VIPvJ'
+        trackName: "Dance Like We're Making Love",
+        trackId: '3biFdxByHgUhTbp2dG89zK',
+        popularity: 53,
+        sample: 'https://p.scdn.co/mp3-preview/31cb5f082c9d0f6d22af9f26494fef9f1301ed83?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.721,
+        energy: 0.541,
+        valence: 0.263,
+        tempo: 96.046,
+        uri: 'spotify:track:3biFdxByHgUhTbp2dG89zK'
     },
     {
         artwork: 'https://i.scdn.co/image/ab67616d00001e02acef4d97449963d5576465fe',
@@ -143,7 +143,7 @@ export const array1 = [
     }
 ]
 
-export const array2 = [
+export const livin = [
     {
         artwork: 'https://i.scdn.co/image/ab67616d00001e021336b31b6a1799f0de5807ac',
         albumName: 'Slippery When Wet',
@@ -858,7 +858,295 @@ export const array5 = [
         }
     ]
 
+export const array2 = [
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e026afd7dd459958ef559e9f248',
+        albumName: 'Gangnam Style (강남스타일)',
+        artistName: 'PSY',
+        trackName: 'Gangnam Style (강남스타일)',
+        trackId: '03UrZgTINDqvnUMbbIMhql',
+        popularity: 77,
+        sample: null,
+        danceability: 0.727,
+        energy: 0.937,
+        valence: 0.749,
+        tempo: 132.067,
+        uri: 'spotify:track:03UrZgTINDqvnUMbbIMhql'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e024a66723c190b67f69eb223f2',
+        albumName: 'The Very Best Of Yiruma: Yiruma & Piano',
+        artistName: 'Yiruma',
+        trackName: 'River Flows In You',
+        trackId: '2agBDIr9MYDUducQPC1sFU',
+        popularity: 75,
+        sample: 'https://p.scdn.co/mp3-preview/3cd81468938f7c9d551717ad4e23816591e56fec?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.315,
+        energy: 0.22,
+        valence: 0.116,
+        tempo: 145.195,
+        uri: 'spotify:track:2agBDIr9MYDUducQPC1sFU'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02fb4632fbe03fedf469376646',
+        albumName: '2nd Mini Album',
+        artistName: '2NE1',
+        trackName: 'I Am The Best',
+        trackId: '26EM9sZnQkLLQxixGd88KE',
+        popularity: 71,
+        sample: null,
+        danceability: 0.819,
+        energy: 0.844,
+        valence: 0.687,
+        tempo: 127.997,
+        uri: 'spotify:track:26EM9sZnQkLLQxixGd88KE'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e0215f4fd5f831b3a204591b68f',
+        albumName: 'The Boys',
+        artistName: "Girls' Generation",
+        trackName: 'The Boys',
+        trackId: '4sRQg2aoec0VIvQ7GZPGMy',
+        popularity: 63,
+        sample: 'https://p.scdn.co/mp3-preview/33a527819fd7e7ebfe8e87dd7b85e7b19f121b27?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.885,
+        energy: 0.937,
+        valence: 0.878,
+        tempo: 114.974,
+        uri: 'spotify:track:4sRQg2aoec0VIvQ7GZPGMy'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e0297bc6e69b9278dc31a612fa1',
+        albumName: 'Still Alive',
+        artistName: 'BIGBANG',
+        trackName: 'Blue',
+        trackId: '4LOLvDtzykDC7y9WehFoOi',
+        popularity: 62,
+        sample: 'https://p.scdn.co/mp3-preview/06cf759248c5bc08fcf0a9fe3d482809dbc4bf7b?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.608,
+        energy: 0.706,
+        valence: 0.357,
+        tempo: 124.985,
+        uri: 'spotify:track:4LOLvDtzykDC7y9WehFoOi'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e020cb15dbf77f55187478d34c9',
+        albumName: 'Press Play',
+        artistName: 'BTOB',
+        trackName: 'WOW',
+        trackId: '21CJvM7HXrI80aDHz2MES4',
+        popularity: 51,
+        sample: 'https://p.scdn.co/mp3-preview/ba6cbfeaa8df12d9ea7b6bd826029efc5485c868?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.741,
+        energy: 0.959,
+        valence: 0.41,
+        tempo: 110.016,
+        uri: 'spotify:track:21CJvM7HXrI80aDHz2MES4'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02bb955816b17a4741b6b5ea38',
+        albumName: 'GDnTOP',
+        artistName: 'GD&TOP',
+        trackName: 'High High',
+        trackId: '00Luoss7SGaxzTEy94cfia',
+        popularity: 50,
+        sample: 'https://p.scdn.co/mp3-preview/af9aa0522c00f1b12c24b8460adaaa5b635db640?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.7,
+        energy: 0.864,
+        valence: 0.561,
+        tempo: 129.999,
+        uri: 'spotify:track:00Luoss7SGaxzTEy94cfia'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e024a66723c190b67f69eb223f2',
+        albumName: 'The Very Best Of Yiruma: Yiruma & Piano',
+        artistName: 'Yiruma',
+        trackName: 'Kiss The Rain',
+        trackId: '7vd1j4IDTU0koES9M8dvBQ',
+        popularity: 65,
+        sample: 'https://p.scdn.co/mp3-preview/7e515ea1caf2102078c247cdd5d8ce64215af694?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.56,
+        energy: 0.0519,
+        valence: 0.182,
+        tempo: 132.691,
+        uri: 'spotify:track:7vd1j4IDTU0koES9M8dvBQ'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02fb4632fbe03fedf469376646',
+        albumName: '2nd Mini Album',
+        artistName: '2NE1',
+        trackName: 'Lonely',
+        trackId: '5BzfRtVjyC4wbISHdbCvWL',
+        popularity: 58,
+        sample: 'https://p.scdn.co/mp3-preview/6bfb2620d6ea37c87fd980149127c177998e4301?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.588,
+        energy: 0.568,
+        valence: 0.393,
+        tempo: 94.83,
+        uri: 'spotify:track:5BzfRtVjyC4wbISHdbCvWL'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e027b1856e4accdb0e834009710',
+        albumName: 'HOOT',
+        artistName: "Girls' Generation",
+        trackName: 'Hoot',
+        trackId: '1uLBl4JvBl7bwSRkxmggkS',
+        popularity: 55,
+        sample: 'https://p.scdn.co/mp3-preview/2163754fe8c8a390b6ccdb39daecb092d7c2d2ed?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.683,
+        energy: 0.98,
+        valence: 0.934,
+        tempo: 128.058,
+        uri: 'spotify:track:1uLBl4JvBl7bwSRkxmggkS'
+    }
+]
+
 export const combinedArray = [array1, array2, array3, array4, array5, array6]
+
+
+
+export const recommendations = [
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02a6f439c8957170652f9410e2',
+        albumName: 'Loose',
+        artistName: 'Nelly Furtado',
+        trackName: 'Promiscuous',
+        trackId: '2gam98EZKrF9XuOkU13ApN',
+        popularity: 87,
+        sample: null,
+        danceability: 0.808,
+        energy: 0.97,
+        valence: 0.868,
+        tempo: 114.328,
+        uri: 'spotify:track:2gam98EZKrF9XuOkU13ApN'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e028a99868b5a57469de83fb9ba',
+        albumName: 'Bombs Away',
+        artistName: 'Sheppard',
+        trackName: 'Geronimo',
+        trackId: '4hd4YTkABCn2zuTZeYEA6D',
+        popularity: 63,
+        sample: 'https://p.scdn.co/mp3-preview/2da2b805a4347b73ac0801ac7ff788ffb850bd89?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.705,
+        energy: 0.745,
+        valence: 0.526,
+        tempo: 142.014,
+        uri: 'spotify:track:4hd4YTkABCn2zuTZeYEA6D'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e0222463d6939fec9e17b2a6235',
+        albumName: 'Songs From The Big Chair (Super Deluxe Edition)',
+        artistName: 'Tears For Fears',
+        trackName: 'Everybody Wants To Rule The World',
+        trackId: '4RvWPyQ5RL0ao9LPZeSouE',
+        popularity: 90,
+        sample: null,
+        danceability: 0.645,
+        energy: 0.795,
+        valence: 0.535,
+        tempo: 112.067,
+        uri: 'spotify:track:4RvWPyQ5RL0ao9LPZeSouE'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02f46b9d202509a8f7384b90de',
+        albumName: 'Purpose (Deluxe)',
+        artistName: 'Justin Bieber',
+        trackName: 'Love Yourself',
+        trackId: '50kpGaPAhYJ3sGmk6vplg0',
+        popularity: 87,
+        sample: null,
+        danceability: 0.609,
+        energy: 0.378,
+        valence: 0.515,
+        tempo: 100.418,
+        uri: 'spotify:track:50kpGaPAhYJ3sGmk6vplg0'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02744ea41a7c1ae57024752db9',
+        albumName: '21',
+        artistName: 'Adele',
+        trackName: 'Rumour Has It',
+        trackId: '5mFMb5OHI3cN0UjITVztCj',
+        popularity: 70,
+        sample: 'https://p.scdn.co/mp3-preview/b2064057c1d5e811103e04ec682e52d2d3e5759e?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.612,
+        energy: 0.749,
+        valence: 0.574,
+        tempo: 120.052,
+        uri: 'spotify:track:5mFMb5OHI3cN0UjITVztCj'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02e19c63f62581ab73a6589382',
+        albumName: 'Pure Heroine',
+        artistName: 'Lorde',
+        trackName: 'Team',
+        trackId: '3G6hD9B2ZHOsgf4WfNu7X1',
+        popularity: 82,
+        sample: null,
+        danceability: 0.69,
+        energy: 0.578,
+        valence: 0.416,
+        tempo: 99.961,
+        uri: 'spotify:track:3G6hD9B2ZHOsgf4WfNu7X1'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02c6710b4a52539506c30e5354',
+        albumName: 'Monkey Business',
+        artistName: 'Black Eyed Peas',
+        trackName: 'Pump It',
+        trackId: '2ygMBIctKIAfbEBcT9065L',
+        popularity: 80,
+        sample: null,
+        danceability: 0.648,
+        energy: 0.931,
+        valence: 0.744,
+        tempo: 153.649,
+        uri: 'spotify:track:2ygMBIctKIAfbEBcT9065L'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e029efda673310de265a2c1cf1f',
+        albumName: 'Freaks',
+        artistName: 'Surf Curse',
+        trackName: 'Freaks',
+        trackId: '7EkWXAI1wn8Ii883ecd9xr',
+        popularity: 86,
+        sample: 'https://p.scdn.co/mp3-preview/039505c3b40b4478ec45ccb64fed211487887dd0?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.345,
+        energy: 0.941,
+        valence: 0.407,
+        tempo: 179.626,
+        uri: 'spotify:track:7EkWXAI1wn8Ii883ecd9xr'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02d6df3bccf3ec41ea2f76debc',
+        albumName: 'Wanted on Voyage (Expanded Edition)',
+        artistName: 'George Ezra',
+        trackName: 'Budapest',
+        trackId: '2ixsaeFioXJmMgkkbd4uj1',
+        popularity: 83,
+        sample: 'https://p.scdn.co/mp3-preview/03e6f12a87c862370fe965eb330fbcab1f2ee93f?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.717,
+        energy: 0.455,
+        valence: 0.389,
+        tempo: 127.812,
+        uri: 'spotify:track:2ixsaeFioXJmMgkkbd4uj1'
+    },
+    {
+        artwork: 'https://i.scdn.co/image/ab67616d00001e02d0593178c6c2594693ee34b7',
+        albumName: 'HIStory - PAST, PRESENT AND FUTURE - BOOK I',
+        artistName: 'Michael Jackson',
+        trackName: "They Don't Care About Us",
+        trackId: '3wuCCNCnBhJlwkIJTBZFiv',
+        popularity: 76,
+        sample: 'https://p.scdn.co/mp3-preview/bd1e519e31341a8bdebb46c96f759d74e18e98c5?cid=ce221dc6b3f440eb8e03b89481d78974',
+        danceability: 0.859,
+        energy: 0.905,
+        valence: 0.731,
+        tempo: 89.946,
+        uri: 'spotify:track:3wuCCNCnBhJlwkIJTBZFiv'
+    }
+]
 
 function getRandomInt(min, max) {
     min = Math.ceil(min); // Ensure the minimum is a whole number

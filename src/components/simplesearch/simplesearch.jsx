@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {addSongs} from "../songcontainer/songcontainerSlice";
 import {sendArray} from "../../songdata/songdata";
+import {livin} from "../../songdata/songdata";
 export default function Simplesearch() {
 
     const option = useSelector(state => state.optionbuttons.chosenOption)
@@ -24,7 +25,7 @@ export default function Simplesearch() {
         //   const response = await fetch(`/songsearch?` + urlParams)
         //     if (response.status === 200) {
         //     const data = await response.json()
-            dispatch(addSongs(sendArray()))
+            dispatch(addSongs(livin))
         // } else {
         //         if (response.status === 204) {
         //             alert('No tracks found')

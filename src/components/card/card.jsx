@@ -3,6 +3,7 @@ import {Image} from "react-bootstrap";
 import {addSong, removeSong} from "../playlist/playlistSlice";
 import {useDispatch} from "react-redux";
 import {addSongs} from "../songcontainer/songcontainerSlice";
+import {recommendations} from "../../songdata/songdata";
 
 export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName, albumName, artistName, popularity, danceability, energy, tempo, valence, }) {
 
@@ -36,17 +37,18 @@ export function Songcard({ cardIndex, context, trackId, uri, artwork, trackName,
 
     async function getRecommendations() {
         const urlParams = new URLSearchParams({trackid: trackId})
-        try {
-            const response = await fetch('/getrecommendations?' + urlParams.toString())
-            if (response.status === 200) {
-                const data = await response.json()
-                dispatch(addSongs(data))
-            } else if (response.status === 403) {
-                alert('Please login')
-            }
-        } catch (e) {
-            console.error(e)
-        }
+        // try {
+        //     const response = await fetch('/getrecommendations?' + urlParams.toString())
+        //     if (response.status === 200) {
+        //         const data = await response.json()
+        //         dispatch(addSongs(data))
+        //     } else if (response.status === 403) {
+        //         alert('Please login')
+        //     }
+        // } catch (e) {
+        //     console.error(e)
+        // }
+        dispatch(addSongs(recommendations))
 
     }
 
